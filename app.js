@@ -1,3 +1,9 @@
+var width = 800;
+var height = 400;
+var barPadding = 10;
+var svg = d3.select("svg")
+
+
 d3.select("#reset")
     .on("click", function() {
       d3.selectAll(".letter")
