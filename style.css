@@ -33,11 +33,10 @@ form > button:hover {
   margin: 20px auto 0;
 }
 
-.letter {
+.letter{
   fill: #ffc800;
-  
 }
 
-.new {
+.new{
   fill: #00ff00;
 }
