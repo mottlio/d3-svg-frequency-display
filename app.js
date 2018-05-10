@@ -37,12 +37,18 @@ d3.select("form")
         .exit()
         .remove();
 
-      letters                
+      var letterEnter = letters                
         .enter()
-        .append("rect")
+        .append("g")
           .classed("letter", true)
           .classed("new", true)
-        .merge(letters)
+
+      letterEnter.append("rect");
+      letterEnter.append("text");
+
+
+      letterEnter.merge(letters)
+        .select("rect")
           .style("width", barWidth)
           .style("height", function(d) {
             return d.count * 20;
@@ -53,8 +59,9 @@ d3.select("form")
           .attr("y", function(d){
             return height - d.count * 20;
           });
-      console.log(barWidth);
-      console.log(width);
+      
+
+        
 
       d3.select("#phrase")
           .text("Analysis of: " + text);
